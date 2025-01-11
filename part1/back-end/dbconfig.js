@@ -9,7 +9,7 @@ var dbconfig = {
     },
     production: {
         //connectionLimit : 10,
-        host: '192.168.56.106',
+        host: 'localost',
         port: '3306',
         user: 'dbuser',
         password: 'P@ssw0rd@2025',
