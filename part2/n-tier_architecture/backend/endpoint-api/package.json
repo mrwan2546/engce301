@@ -9,9 +9,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@hapi/boom": "^10.0.1",
     "@hapi/hapi": "^21.3.10",
     "@hapi/inert": "^7.1.0",
     "@types/hapi-auth-bearer-token": "^6.1.8",
+    "@types/mssql": "^9.1.6",
     "async": "^3.2.5",
     "axios": "^1.7.2",
     "cors": "^2.8.5",
