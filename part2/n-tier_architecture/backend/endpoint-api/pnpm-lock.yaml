@@ -59,6 +59,10 @@ importers:
       ws:
         specifier: ^8.18.0
         version: 8.18.0
+    devDependencies:
+      '@types/hapi':
+        specifier: ^18.0.14
+        version: 18.0.14
 
 packages:
 
@@ -245,8 +249,26 @@ packages:
   '@tediousjs/connection-string@0.5.0':
     resolution: {integrity: sha512-7qSgZbincDDDFyRweCIEvZULFAw5iz/DeunhvuxpL31nfntX3P4Yd4HkHBRg9H8CdqY1e5WFN1PZIz/REL9MVQ==}
 
+  '@types/boom@7.3.5':
+    resolution: {integrity: sha512-jBS0kU2s9W2sx+ILEyO4kxqIYLllqcUXTaVrBctvGptZ+4X3TWkkgY9+AmxdMPKrgiDDdLcfsaQCTu7bniLvgw==}
+
+  '@types/catbox@10.0.9':
+    resolution: {integrity: sha512-4qXm1SmZurBMNFc/536+7gfbOlN43fWyoo4O0bdLqtpDK/cpuCYnEDou0Cl4naaMwuJ19rEwnuscR7tetGnTDA==}
+
   '@types/hapi-auth-bearer-token@6.1.8':
     resolution: {integrity: sha512-2bznymrmFRaHtStZin+cVZV38WcFO43xAJVWcrhu6wBDU0ciVQdhRTtctaVtDV9ln3NmgMz+Cb0aUYHcCKMSvA==}
+
+  '@types/hapi@18.0.14':
+    resolution: {integrity: sha512-/AlCHpOTzHOX7WYGlQAhL75Ca5gsm0S6X7mkW6RWW06e4Eot6xPm76qGXPHagVrpfs8qTKJdysJah/Uhtr8ojw==}
+
+  '@types/iron@5.0.5':
+    resolution: {integrity: sha512-ndu2RvRJ5LWsSVF0kBMJe9qnNcFcAO9eYwzr2P4FOU6m5ypRrbdiX+d8x4GNG7lIn1mKShyQf3M08CIX4wPsEA==}
+
+  '@types/mime-db@1.43.5':
+    resolution: {integrity: sha512-/bfTiIUTNPUBnwnYvUxXAre5MhD88jgagLEQiQtIASjU+bwxd8kS/ASDA4a8ufd8m0Lheu6eeMJHEUpLHoJ28A==}
+
+  '@types/mimos@3.0.6':
+    resolution: {integrity: sha512-pQlYu/Q1e5F5lyu7ATW4J2cyPOfjhRHZgAepZlKBbHqqAjshteHtNLqBXgx7KV5GjXjPLXWUvbzWaGwmVFPaYA==}
 
   '@types/mssql@9.1.6':
     resolution: {integrity: sha512-1JxvEgzVPtBkDOGjzuhsoYxjb4sKrcMC4V5NanUVSZMlXG4ksoZUpjY0m4gjpwfjZ3h22rJ6n0gTJ9l100H5wg==}
@@ -254,8 +276,14 @@ packages:
   '@types/node@22.10.10':
     resolution: {integrity: sha512-X47y/mPNzxviAGY5TcYPtYL8JsY3kAq2n8fMmKoRCxq/c4v4pyGNCzM2R6+M5/umG4ZfHuT+sgqDYqWc9rJ6ww==}
 
+  '@types/podium@1.0.4':
+    resolution: {integrity: sha512-HuG5/hRHs9PxuXXlNFXPy7mHMnBD6Z4riED2SFGwjs+RcszJUkxLgYHQpoiDpYrhLv7sHk9WDyswybD6aNYkig==}
+
   '@types/readable-stream@4.0.18':
     resolution: {integrity: sha512-21jK/1j+Wg+7jVw1xnSwy/2Q1VgVjWuFssbYGTREPUBeZ+rqVFl2udq0IkxzPC0ZhOzVceUbyIACFZKLqKEBlA==}
+
+  '@types/shot@4.0.5':
+    resolution: {integrity: sha512-4wiGdy1sXfpcFgF1VAouUaSl6zjWn0v2NarNgviAJYm3BeiODywERnRtIC5YtNIbfh3UfShfCRD9yyeWAD7R0w==}
 
   abort-controller@3.0.0:
     resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
@@ -1259,11 +1287,36 @@ snapshots:
 
   '@tediousjs/connection-string@0.5.0': {}
 
+  '@types/boom@7.3.5': {}
+
+  '@types/catbox@10.0.9': {}
+
   '@types/hapi-auth-bearer-token@6.1.8':
     dependencies:
       '@hapi/hapi': 21.3.10
       '@types/node': 22.10.10
       joi: 17.13.3
+
+  '@types/hapi@18.0.14':
+    dependencies:
+      '@types/boom': 7.3.5
+      '@types/catbox': 10.0.9
+      '@types/iron': 5.0.5
+      '@types/mimos': 3.0.6
+      '@types/node': 22.10.10
+      '@types/podium': 1.0.4
+      '@types/shot': 4.0.5
+      joi: 17.13.3
+
+  '@types/iron@5.0.5':
+    dependencies:
+      '@types/node': 22.10.10
+
+  '@types/mime-db@1.43.5': {}
+
+  '@types/mimos@3.0.6':
+    dependencies:
+      '@types/mime-db': 1.43.5
 
   '@types/mssql@9.1.6':
     dependencies:
@@ -1277,10 +1330,16 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
+  '@types/podium@1.0.4': {}
+
   '@types/readable-stream@4.0.18':
     dependencies:
       '@types/node': 22.10.10
       safe-buffer: 5.1.2
+
+  '@types/shot@4.0.5':
+    dependencies:
+      '@types/node': 22.10.10
 
   abort-controller@3.0.0:
     dependencies:
